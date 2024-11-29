@@ -1,0 +1,734 @@
+/* styles.css */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1.2fr;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+  }
+  
+  /* Logo Section */
+  .logo-container {
+    grid-column: 1 / 2;
+    background-color: #ffffff; /* Warna latar belakang untuk logo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px; /* Tinggi logo container */
+    position: fixed; /* Posisi tetap saat scroll */
+  top: 0; /* Pastikan menempel di atas */
+  left: 0; /* Menempel di kiri layar */
+  width: 20%; /* Lebar penuh */
+  z-index: 1000; /* Pastikan berada di atas elemen lain */
+  }
+  
+  .logo {
+    max-height: 100px; /* Menyesuaikan tinggi maksimum logo */
+    max-width: 100%; /* Menyesuaikan lebar maksimum logo */
+    object-fit: contain; /* Memastikan gambar tetap proporsional */
+  }
+  .search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .search-input {
+    padding: 8px 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    width: 250px;
+  }
+  
+  .search-input::placeholder {
+    font-size: 14px;
+    color: #a0a0a0;
+  }
+  
+  .icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .icons i {
+    width: 24px;
+    height: 24px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon-search,
+  .icon-bell,
+  .icon-calendar {
+    width: 16px;
+    height: 16px;
+    background-size: cover;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    position: fixed;
+    background-color: #2A254B;
+    top: 70px; /* Memberikan jarak antara sidebar dan navbar */
+    left: 0;
+    width: 220px;
+    height: calc(100vh - 80px);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+    border-radius: 0 15px 15px 0; /* Sudut melengkung di sisi kanan */
+      
+  }
+  
+  .sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar-menu li {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .sidebar-menu li i {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  
+  .sidebar-menu li:hover {
+    color: #F3B601;
+  }
+  
+  /* Sidebar Divider */
+  .sidebar-divider {
+    border: 0;
+    border-top: 1px solid #414161;
+    margin: 20px 0;
+  }
+  
+  /* Sidebar Profile */
+  .sidebar-profile p {
+    font-size: 12px;
+    font-weight: bold;
+    color: #bbb;
+    margin-bottom: 10px;
+  }
+  
+  .sidebar-profile ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar-profile ul li {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .sidebar-profile ul li i {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  
+  .sidebar-profile ul li:hover {
+    color: #F3B601;
+  }
+  
+  /* Sidebar Logout */
+  .sidebar-logout {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  /* Main Content */
+  .main-content {
+    grid-column: 2 / 3;
+    grid-row: 1 / span 2;
+    padding: 20px;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  header .title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  header .search-notification {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  header input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .icon {
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .konten {
+    height: 150px;
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modul-kompetensi {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .img-box {
+    flex: 1;
+    height: 100px;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .tabel-peserta table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f9f9f9;
+  }
+  
+  /* Right Panel */
+  .right-panel {
+    grid-column: 3 / 4;
+    grid-row: 1 / span 2;
+    padding: 20px;
+    background-color: #ffffff;
+    border-left: 1px solid #ddd;
+  }
+  
+  .user-info {
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .calendar-box {
+    background-color: #2a254b; /* Warna ungu */
+    border-radius: 10px;
+    padding: 20px;
+    width: 230px;
+    text-align: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+  }
+  
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .calendar-header .month-year {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .calendar-header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .calendar-header button:hover {
+    color: #e0e0e0;
+  }
+  
+  .calendar-days {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .calendar-days .day {
+    width: 30px;
+    text-align: center;
+  }
+  
+  .calendar-dates {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .calendar-dates .date {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    color: #2a254b;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .calendar-dates .date.active {
+    background-color: #574b90; /* Warna ungu tua untuk tanggal aktif */
+    color: white;
+    font-weight: bold;
+  }
+  
+  .calendar-dates .date:hover {
+    background-color: #ddd;
+  }
+  
+  
+  .schedule h3 {
+    margin-bottom: 10px;
+  }
+  
+  .schedule ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .schedule li {
+    margin-bottom: 5px;
+  }
+  
+  .img-box-large {
+    height: 150px;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* User Info Styling */
+  .user-info {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff; /* Latar belakang putih */
+    border-radius: 10px; /* Membuat sudut melengkung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan */
+  }
+  
+  .user-info .profile-pic {
+    width: 80px; /* Ukuran lebar gambar */
+    height: 80px; /* Ukuran tinggi gambar */
+    border-radius: 50%; /* Membuat gambar menjadi lingkaran */
+    object-fit: cover; /* Menjaga proporsi gambar */
+    margin-bottom: 10px; /* Jarak bawah gambar ke teks */
+  }
+  
+  .user-info h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0; /* Hilangkan margin default */
+  }
+  
+  .user-info p {
+    font-size: 14px;
+    color: #666; /* Warna teks yang lebih terang */
+    margin: 5px 0 0; /* Jarak atas teks */
+  }
+  
+  /* Schedule Section */
+  .schedule {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .schedule h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .schedule ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .schedule ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .schedule ul li:last-child {
+    border-bottom: none;
+  }
+  
+  .icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    flex-shrink: 0;
+    margin-right: 15px;
+  }
+  
+  .details {
+    flex-grow: 1;
+  }
+  
+  .details strong {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .details p {
+    font-size: 12px;
+    color: #666;
+    margin: 5px 0 0;
+  }
+  
+  .arrow {
+    font-size: 16px;
+    color: #999;
+    flex-shrink: 0;
+  }
+  
+  /* Styling for Content Card */
+  .content-card {
+    background: linear-gradient(135deg, #2575fc, #6a11cb); /* Gradien ungu ke biru */
+    border-radius: 15px;
+    padding: 20px;
+    color: #fff;
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .content-card .category {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffd700; /* Warna kuning */
+    margin-bottom: 10px;
+  }
+  
+  .content-card h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .content-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 15px 0;
+  }
+  
+  .meta-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .meta-info .author, .meta-info .date {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+  }
+  
+  .meta-info span {
+    margin-right: 5px;
+  }
+  
+  .start-learning {
+    background-color: #fff;
+    color: #6a11cb;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-transform: uppercase;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .start-learning:hover {
+    background-color: #6a11cb;
+    color: #fff;
+  }
+  
+  /* Modul Kompetensi */
+  .modul-kompetensi {
+    padding: 20px;
+  }
+  
+  .modul-kompetensi h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .card-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-header {
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+  }
+  
+  .card-header .category {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .card-body {
+    padding: 15px;
+  }
+  
+  .card-body h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .card-body ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .card-body ul li {
+    font-size: 10px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .card-body ul li.highlight {
+    background-color: #ffeb99;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  /* Media Query untuk layar kecil (smartphone) */
+  @media (max-width: 768px) {
+    /* Mengubah layout grid */
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto;
+    }
+  
+    /* Sidebar */
+    .sidebar {
+      position: relative;
+      width: 100%;
+      height: auto;
+      top: 0;
+      border-radius: 0;
+      padding: 10px;
+    }
+  
+    .sidebar-menu li {
+      font-size: 12px;
+    }
+  
+    /* Right Panel */
+    .right-panel {
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+      padding: 10px;
+      border-left: none;
+    }
+  
+    /* Main Content */
+    .main-content {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      padding: 10px;
+    }
+  
+    /* Kalender */
+    .calendar-box {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .calendar-days .day,
+    .calendar-dates .date {
+      width: 20px;
+      height: 20px;
+      font-size: 12px;
+    }
+  
+    /* Konten */
+    .content {
+      gap: 10px;
+    }
+  
+    .konten {
+      height: 120px;
+    }
+  
+    /* Card */
+    .card-container {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .card {
+      max-width: 100%;
+      flex: none;
+    }
+  }
+  
+  /* Media Query untuk layar sangat kecil (≤480px) */
+  @media (max-width: 480px) {
+    /* Sidebar */
+    .sidebar {
+      text-align: center;
+    }
+  
+    .sidebar-menu li {
+      font-size: 10px;
+    }
+  
+    /* Header */
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    /* Search Input */
+    .search-input {
+      width: 100%;
+    }
+  
+    /* Kalender */
+    .calendar-box {
+      padding: 5px;
+    }
+  
+    .calendar-days .day,
+    .calendar-dates .date {
+      width: 15px;
+      height: 15px;
+      font-size: 10px;
+    }
+  
+    /* Card */
+    .card-header {
+      height: 120px;
+    }
+  
+    .card-body h4 {
+      font-size: 14px;
+    }
+  
+    .card-body ul li {
+      font-size: 8px;
+    }
+  
+    .content-card h2 {
+      font-size: 18px;
+    }
+  
+    .start-learning {
+      font-size: 12px;
+      padding: 8px 16px;
+    }
+  }
+  
+  /* Media Query untuk layar besar (tablet atau lebih besar) */
+  @media (min-width: 769px) {
+    /* Sidebar */
+    .sidebar {
+      width: 220px;
+      height: calc(100vh - 80px);
+      border-radius: 0 15px 15px 0;
+    }
+  
+    /* Main Content */
+    .main-content {
+      grid-column: 2 / 3;
+    }
+  
+    /* Right Panel */
+    .right-panel {
+      grid-column: 3 / 4;
+    }
+  }
+  
